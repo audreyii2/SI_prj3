@@ -1,0 +1,382 @@
+/* General reset remains unchanged */
+* {
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: normal;
+}
+
+/* Basic styles remain unchanged */
+body {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* background-color: black; */
+    /* color: #ffffff; */
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+a {
+    /* color: #ffe0ff; */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #ffffc1;
+    /* text color after clicked for dark mode */
+    font-style: italic;
+    text-decoration: underline;
+}
+
+a[href="#main"] {
+    font-size: 1rem;
+    /* Equivalent to h4 size */
+    font-weight: bold;
+}
+
+/* Apply touch/click effect on mobile devices */
+a:active {
+    color: #ffffc1;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+/* Navigation - centered horizontally */
+nav {
+    display: table-row;
+    position: sticky;
+    top: 0;
+    /* background-color: #294E65; */
+    z-index: 1000;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+    height: 13vh;
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    font-weight: bold;
+    font-size: 1.25rem;
+    /* Equivalent to h3 size */
+}
+
+header {
+    display: table-cell;
+    text-align: center;
+    padding: 2rem;
+    /* background-color: #192a3a; */
+    border-bottom: 1px solid black;
+    height: 13vh;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h2 {
+    padding: 2rem 0;
+}
+
+/* Table container */
+#athlete-table {
+    width: 83vw;
+    /* Adjusted to center and fit neatly */
+    margin: auto;
+    /* Center the table */
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+#athlete-table thead {
+    /* background-color: #5b5249; */
+    position: sticky;
+    top: 0;
+}
+
+#athlete-table th,
+#athlete-table td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#athlete-table th {
+    position: -webkit-sticky;
+    /* for Safari */
+    position: sticky;
+    z-index: 2;
+}
+
+#athlete-table tbody tr:nth-child(odd) {
+    background-color: #27322b;
+}
+
+#athlete-table tbody tr:nth-child(even) {
+    background-color: #3c4840;
+}
+
+/* Media Queries for screen widths */
+@media (min-width: 211px) {
+
+    #athlete-table th:nth-child(4),
+    #athlete-table td:nth-child(4),
+    #athlete-table th:nth-child(5),
+    #athlete-table td:nth-child(5) {
+        display: none;
+        column-width: 770px;
+    }
+}
+
+/* Start of Media Queries for mobile devices */
+@media (max-width: 421px) {
+    /* body {
+    } */
+
+    section,
+    nav,
+    header,
+    footer {
+        column-width: max-content;
+    }
+
+    /* Collapse table columns */
+    #columns,
+    #picture {
+        display: none;
+    }
+
+    #athlete-table,
+    #athlete-table thead,
+    #athlete-table tbody,
+    #athlete-table th,
+    #athlete-table td,
+    #athlete-table tr {
+        display: block;
+    }
+
+    #athlete-table thead tr {
+        display: none;
+    }
+
+    #athlete-table tr {
+        margin-bottom: 1rem;
+        border-bottom: 1px solid black;
+    }
+
+    #athlete-table td {
+        position: relative;
+        padding-left: 50%;
+    }
+
+    #athlete-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 1rem;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    /* Adjust table width */
+    #athlete-table {
+        width: 83vw;
+        height: auto;
+        overflow-x: auto;
+        margin: auto;
+        /* Make table horizontally scrollable on small screens */
+    }
+
+    /* Adjustments for images */
+    .full-width-image {
+        width: 67vw;
+        margin: auto;
+        height: auto;
+        aspect-ratio: 3 / 4;
+    }
+
+    /* Gallery images and buttons */
+    .gallery-container {
+        max-width: 53vw;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .gallery-container img {
+        width: 100%;
+        aspect-ratio: 3 / 4;
+    }
+
+    .gallery-container .prev,
+    .gallery-container .next {
+        width: 13vw;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .gallery-container .prev {
+        left: -13vw;
+    }
+
+    .gallery-container .next {
+        right: -13vw;
+    }
+}
+
+/* Image container - general case */
+.full-width-image {
+    height: auto;
+    width: calc(50vh * 0.75);
+    /* Set width to 75% of the height maintaining aspect ratio */
+    margin: 20px auto;
+    aspect-ratio: 3 / 4;
+    /* Maintain a 3:4 aspect ratio */
+}
+
+.full-width-image img {
+    width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+    /* Smooth transition for zoom */
+}
+
+.full-width-image img:hover {
+    transform: scale(1.4);
+    /* Slight zoom effect on hover */
+}
+
+/* Footer */
+.footer {
+    width: 100vw;
+    /* take up full width */
+    height: auto;
+    padding: 1rem;
+    background-color: #192a3a;
+    /* Match background color with header */
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+    /* center horizontally */
+}
+
+/* Collapsible sections */
+section.collapsible .content {
+    display: block;
+    /* Ensure the section is always visible */
+}
+
+section.collapsible .content {
+    display: none;
+}
+
+section.collapsible.active .content {
+    display: block;
+    /* Show content when section is active */
+}
+
+section.collapsible:not(.active) {
+    background-color: #6B434B;
+    /* Background color when collapsed */
+    color: #fdf4e7;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+section.collapsible h2 {
+    color: #fdf4e7;
+}
+
+.tooltip-text {
+    display: none;
+}
+
+/* Gallery */
+.gallery-container {
+    position: relative;
+    max-width: 53vw;
+    /* Adjust container width */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-container img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+}
+
+.gallery-container .prev,
+.gallery-container .next,
+.gallery-container .back {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    background-color: #006151;
+    /* main theme color */
+    font-weight: bold;
+    font-size: 15px;
+    /* same size as h2 */
+    transition: 0.6s ease;
+    user-select: none;
+    width: 13vw;
+}
+
+.gallery-container .prev {
+    left: -13vw;
+}
+
+.gallery-container .next {
+    right: -13vw;
+}
+
+.gallery-container .back {
+    left: -13vw;
+}
+
+.gallery-container .prev:hover,
+.gallery-container .next:hover,
+.gallery-container .back:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gallery-container .prev:hover .tooltip-text,
+.gallery-container .next:hover .tooltip-text {
+    display: block;
+}
+
+/* Section for handling font-size changes if viewport is equal to or larger than 422px */
+@media (min-width: 422px) {
+    .resizable-text {
+        font-size: calc(100vw / 40);
+        /* Adjust font size based on viewport width */
+    }
+}
+
+/*TO-DO
+1. Extend Footer background color to match the width of Nav & Header
+2. Center Nav & Header horizontally within the viewport
+3. Max-Content for mobile viewports (width >= 421px)
+4. Keep color and other specific styling unchanged
