@@ -370,9 +370,10 @@ footer a {
     text-decoration: none;
 }
 
-footer a:hover,
-footer a:focus {
+a:hover,
+a:focus {
     text-decoration: underline;
+    font-size: larger;
 }
 
 footer img {
@@ -383,14 +384,14 @@ footer img {
 
 /* CSS for .time class */
 .time {
-    color: #e99c0c;
+    color: sandybrown;
     font-weight: bold;
     font-style: italic;
 }
 
 /* CSS for .athlete class */
 .athlete {
-    color: #c0c99e;
+    color: salmon;
     font-weight: bold;
     font-style: italic;
 }
