@@ -111,12 +111,71 @@ h2 {
     border: 1px solid black;
 }
 
+#team-results td.team-logo {
+    padding: 0;
+}
+
+#team-results td.team-logo img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 100px; /* Adjust max-height as needed */
+}
+
 #team-results tbody tr:nth-child(odd) {
     background-color: #27322b;
 }
 
 #team-results tbody tr:nth-child(even) {
     background-color: #3c4840;
+}
+
+/* Media Queries for screen widths */
+@media (max-width: 375px) {
+    #team-results table {
+        width: 100%;
+        border: 0;
+    }
+
+    #team-results thead {
+        display: none;
+    }
+
+    #team-results tr {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    #team-results td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border: none;
+    }
+
+    #team-results td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    #team-results td.team-logo::before {
+        content: '';
+    }
+
+    #team-results td.team-logo {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    #team-results td.team-logo img {
+        width: 50px; /* Adjust as needed for smaller sizes */
+        height: 50px;
+    }
 }
 
 /* Athlete Results table styling */
@@ -153,18 +212,6 @@ h2 {
 
 #athlete-table tbody tr:nth-child(even) {
     background-color: #3c4840;
-}
-
-/* Media Queries for screen widths */
-@media (min-width: 211px) {
-
-    #athlete-table th:nth-child(4),
-    #athlete-table td:nth-child(4),
-    #athlete-table th:nth-child(5),
-    #athlete-table td:nth-child(5) {
-        display: none;
-        column-width: 770px;
-    }
 }
 
 /* Floating action button for search */
