@@ -380,3 +380,27 @@ footer img {
     max-height: 32px;
     margin-left: 2vw;
 }
+
+/* CSS for .time class */
+.time {
+    color: #e99c0c;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* CSS for .athlete class */
+.athlete {
+    color: #c0c99e;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* CSS for expandable images */
+.expandable-image {
+    transition: transform 0.3s ease;
+}
+
+.expandable-image:active,
+.expandable-image:focus {
+    transform: scale(1.3);
+}
