@@ -1,0 +1,383 @@
+/* General reset remains unchanged */
+* {
+    flex-direction: row;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: normal;
+}
+
+/* Basic styles remain unchanged */
+body {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/* Specific styles from inline styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: #ffffff;
+}
+
+a {
+    color: #ffe0ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #ffffc1;
+    /* text color after clicked for dark mode */
+    font-style: italic;
+    text-decoration: underline;
+}
+
+a[href="#main"] {
+    font-size: 1rem;
+    /* Equivalent to h4 size */
+    font-weight: bold;
+}
+
+/* Apply touch/click effect on mobile devices */
+a:active {
+    color: #ffffc1;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+nav {
+    background-color: #294E65;
+    display: table-row;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+    height: 13vh;
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    font-weight: bold;
+    font-size: 1.25rem;
+    /* Equivalent to h3 size */
+}
+
+header {
+    background-color: #192a3a;
+    display: table-cell;
+    text-align: center;
+    padding: 2rem;
+    border-bottom: 1px solid black;
+    height: 13vh;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center; /* Center aligned header */
+}
+
+h2 {
+    padding: 2rem 0;
+}
+
+/* Team Results table styling */
+#team-results table {
+    width: 83vw;
+    margin: auto;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+#team-results th,
+#team-results td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#team-results tbody tr:nth-child(odd) {
+    background-color: #27322b;
+}
+
+#team-results tbody tr:nth-child(even) {
+    background-color: #3c4840;
+}
+
+/* Athlete Results table styling */
+#athlete-table {
+    width: 83vw;
+    margin: 5vw auto;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+#athlete-table thead {
+    background-color: #5b5249;
+    position: sticky;
+    top: 0;
+}
+
+#athlete-table th,
+#athlete-table td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#athlete-table th {
+    position: -webkit-sticky;
+    /* for Safari */
+    position: sticky;
+    z-index: 2;
+}
+
+#athlete-table tbody tr:nth-child(odd) {
+    background-color: #27322b;
+}
+
+#athlete-table tbody tr:nth-child(even) {
+    background-color: #3c4840;
+}
+
+/* Media Queries for screen widths */
+@media (min-width: 211px) {
+
+    #athlete-table th:nth-child(4),
+    #athlete-table td:nth-child(4),
+    #athlete-table th:nth-child(5),
+    #athlete-table td:nth-child(5) {
+        display: none;
+        column-width: 770px;
+    }
+}
+
+/* Floating action button for search */
+.fab {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #EBEBFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    z-index: 1000;
+}
+
+.fab img {
+    width: 24px;
+    height: 24px;
+}
+
+#search-popup {
+    display: none;
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    z-index: 1001;
+    transition: transform 0.3s, opacity 0.3s;
+    transform: scale(0);
+    opacity: 0;
+}
+
+#search-popup.active {
+    display: block;
+    transform: scale(1);
+    opacity: 1;
+}
+
+#search-popup input[type="search"] {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#search-popup button {
+    background-color: #315c77;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.highlighted {
+    color: #802342;
+    font-weight: bold;
+    background-color: #B7F0F0;
+    /* Highlight color */
+}
+
+.highlighted-focus {
+    background-color: #dcf9f9;
+    color: #D02F2F;
+    font-weight: bold;
+    border: 2px solid #D02F2F;
+}
+
+/* Individual Results Section */
+#individual-results {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+}
+
+#individual-results .content {
+    display: block;
+}
+
+#individual-results.collapsible .content {
+    display: none;
+}
+
+#individual-results.collapsible.active .content {
+    display: block;
+}
+
+#individual-results h2 {
+    cursor: pointer;
+}
+
+#individual-results .athlete figure img {
+    width: 37vw;
+    margin: 29vw;
+    border-radius: 20px;
+    box-shadow: 20px 20px 10px grey;
+}
+
+#individual-results .athlete figcaption {
+    margin-left: 30vw;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: floralwhite;
+    background-color: firebrick;
+    padding: 10px 0;
+}
+
+#individual-results .athlete dl {
+    margin-left: 50vw;
+    font-size: 1.2rem;
+}
+
+/* Gallery Styles */
+#gallery .gallery-container .full-width-image img {
+    box-shadow: rgb(218, 165, 32) 10px 10px 5px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.gallery-container {
+    position: relative;
+    max-width: 53vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-container img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+}
+
+.gallery-container .prev,
+.gallery-container .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    background-color: #006151;
+    /* main theme color */
+    font-weight: bold;
+    font-size: 15px;
+    /* same size as h2 */
+    transition: 0.6s ease;
+    user-select: none;
+    width: 13vw;
+}
+
+.gallery-container .prev {
+    left: -13vw;
+}
+
+.gallery-container .next {
+    right: -13vw;
+}
+
+.gallery-container .prev:hover,
+.gallery-container .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gallery-container .prev:hover .tooltip-text,
+.gallery-container .next:hover .tooltip-text {
+    display: block;
+}
+
+.tooltip-text {
+    display: none;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #16212d;
+    padding: 20px;
+    color: #ffffff;
+}
+
+footer h3 {
+    margin-left: 2vw;
+}
+
+footer p {
+    margin-left: 2vw;
+}
+
+footer address,
+footer a {
+    margin-left: 2vw;
+    color: #ffe0ff;
+    text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+    text-decoration: underline;
+}
+
+footer img {
+    max-width: 32px;
+    max-height: 32px;
+    margin-left: 2vw;
+}
