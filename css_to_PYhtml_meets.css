@@ -365,7 +365,7 @@ footer p {
 
 footer address,
 footer a {
-    margin-left: 2vw;
+    /* margin-left: 2vw; */
     color: #ffe0ff;
     text-decoration: none;
 }
