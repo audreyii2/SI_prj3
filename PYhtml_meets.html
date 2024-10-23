@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>37th Early Bird Open Mens 5000 Meters HS Open 5K Country Meet</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="css_to_PYhtml_meets.css">
+    <style>
+        /* Additional CSS for the floating search button */
+        .fab {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #EBEBFF;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            z-index: 1000;
+        }
+
+        .fab img {
+            width: 24px;
+            height: 24px;
+        }
+
+        #search-popup {
+            display: none;
+            position: fixed;
+            bottom: 70px;
+            right: 20px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            z-index: 1001;
+            transition: transform 0.3s, opacity 0.3s;
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        #search-popup.active {
+            display: block;
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        #search-popup input[type="search"] {
+            width: 200px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        #search-popup button {
+            background-color: #315c77;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .highlighted {
+            color: #802342;
+            font-weight: bold;
+            background-color: #B7F0F0;
+            /* Highlight color */
+        }
+
+        .highlighted-focus {
+            background-color: #dcf9f9;
+            color: #D02F2F;
+            font-weight: bold;
+            border: 2px solid #D02F2F;
+        }
+    </style>
+</head>
+
+<body style="
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: #ffffff;
+">
+    <a href="#main" style="margin: 2vw;
+    color: #ffe0ff;    ">Skip to Main Content &#128144</a>
+
+    <section id="home-page" style="background-color: black;">
+    </section>
+
+    <nav style="background-color: #294E65;
+">
+        <ul>
+            <li><a href="#home-page" style="color: #ffe0ff;">• Home Page</a></li>
+            <li><a href="#team-results" style="color: #ffe0ff;">• Overall Team Results</a></li>
+            <li><a href="#athlete-results" style="color: #ffe0ff;">• Athlete Results</a></li>
+            <li><a href="#individual-results" style="color: #ffe0ff;">• Individual Results</a></li>
+            <li><a href="#gallery" style="color: #ffe0ff;">• Gallery</a></li>
+        </ul>
+    </nav>
+
+    <header style="background-color: #192a3a;
+">
+        <!-- Meet Info -->
+        <h1>37th Early Bird Open Mens 5000 Meters HS Open 5K Country Meet</h1>
+        <h2>Thu Aug 29 2024 &#9925</h2>
+    </header>
+    <main id="main">
+        <section id="team-results">
+            <h2 style="margin: 2vw;">Overall Team Results</h2>
+            <div class="content">
+                <p style="margin: 2vw;"><a href="https://www.athletic.net/CrossCountry/meet/235827/results/943367"
+                        style="color: #ffe0ff;">Team
+                        results (in 37th
+                        Early Bird Open) are available here.</a></p>
+                <p style="margin: 2vw;">The Skyline team performed admirably at the 37th Early Bird Open!</p>
+            </div>
+        </section>
+
+        <section id="athlete-results">
+            <h2 style="margin: 2vw;">Athlete Results</h2>
+            <table id="athlete-table" style="margin: 5vw;">
+                <thead style="background-color: #5b5249;
+">
+                    <tr>
+                        <th>Place &#x1F31F</th>
+                        <th>Name</th>
+                        <th>Timing</th>
+                        <th>Image</th>
+                        <th>Team</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Place">1. &#x1F947</td>
+                        <td data-label="Name">Beckett Crooks</td>
+                        <td data-label="Timing">16:11.20</td>
+                        <td data-label="Image">
+                            <div class="full-width-image">
+                                <img src="21142901.jpg" alt="Beckett Crooks"
+                                    style="width:40vh; margin:auto;">
+                            </div>
+                        </td>
+                        <td data-label="Team">Team A</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Place">2. &#x1F948</td>
+                        <td data-label="Name">Alex Doneth</td>
+                        <td data-label="Timing">16:29.10</td>
+                        <td data-label="Image">
+                            <div class="full-width-image">
+                                <img src="18820257.jpg" alt="Alex Doneth"
+                                    style="width:40vh; margin:auto;">
+                            </div>
+                        </td>
+                        <td data-label="Team">Team B</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section><br><br>
+
+        <section id="individual-results" class="collapsible">
+            <h2 style="margin: 2vw;">&#x1F525 Individual Results >>></h2>
+            <div class="content">
+                <div class="athlete">
+                    <figure class="polaroid">
+                        <img src="2334968.jpg" alt="Profile picture of Athlete 1"
+                            style="width:37vw; margin:29vw; border-radius: 20px; box-shadow: 20px 20px 10px grey;">
+
+                        <figcaption style="margin-left: 30vw; font-size: 1.5rem; font-weight: bold; text-align: center;
+                            color: floralwhite; background-color: firebrick; ">
+                            <br>Athlete 1<br><br>
+                        </figcaption>
+                    </figure><br>
+
+                    <dl style="margin-left: 50vw; font-size: 1.2rem;">
+                        <dt>Place: 1</dt>
+                        <dt>Time: 16:11.20</dt>
+                        <dt>Grade: 12</dt>
+                    </dl>
+                </div>
+
+                <div class="athlete">
+                    <figure class="polaroid">
+                        <img src="18820257.jpg" alt="Profile picture of Athlete 2"
+                            style="width:37vw; margin:29vw; border-radius: 20px; box-shadow: 20px 20px 10px grey;">
+
+                        <figcaption style="margin-left: 30vw; font-size: 1.5rem; font-weight: bold; text-align: center;
+                            color: floralwhite; background-color: firebrick; ">
+                            <br>Athlete 2<br><br>
+                        </figcaption>
+                    </figure><br>
+                    <dl style="margin-left: 50vw; font-size: 1.2rem;">
+                        <dt>Place: 2</dt>
+                        <dt>Time: 16:29.10</dt>
+                        <dt>Grade: 11</dt>
+                    </dl>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2 style="margin: 2vw;">&#x270C Gallery</h2>
+            <!-- Gallery container with image navigation -->
+            <div class="gallery-container">
+                <div class="full-width-image">
+                    <img id="gallery-image" src="09-14 Holly Invitational 01.jpg"
+                        alt="Gallery Display of the Holly Invitational Event"
+                        style="box-shadow: rgb(218, 165, 32) 10px 10px 5px;width: 100%;border-radius: 20px;">
+                </div>
+                <a class="prev" onclick="changeImage(-1)" title="Previous Image">
+                    &#10094;<span class="tooltip-text">Back</span></a>
+                <a class="next" onclick="changeImage(1)" title="Next Image">
+                    &#10095;<span class="tooltip-text">Next</span></a>
+            </div>
+        </section>
+    </main>
+    <footer style="background-color: #16212d;">
+        <h3 style="margin-left: 2vw;">Contact us &#128222</h3><br>
+        <p style="margin-left: 2vw;">Skyline High School</p><br>
+        <address style="margin-left: 2vw;">2552 North Maple Road<br>Ann Arbor, MI 48103</address>
+        <p style="margin-left: 2vw;">Call: <a href="tel: +1 734-994-6515" style="color: #ffe0ff;"
+                aria-label="Call Skyline High">734-994-6515</a></p>
+        <a href="https://sites.google.com/aaps.k12.mi.us/skylinecrosscountry2021/home" style="margin-left: 2vw;
+        color: #ffe0ff;
+        ">XC
+            Skyline Page</a><br><br>
+
+        <p style="margin-left: 2vw;">Follow us on <a href="https://www.instagram.com/a2skylinexc/reel/DAKXKuaxwsw/"
+                aria-label="Instagram" style="color: #ffe0ff;">Instagram<i class="fa-brands fa-instagram"></i></a>
+            and <a href="https://x.com/a2skylinexc" aria-label="Twitter" style="color: #ffe0ff;">Twitter<i
+                    class="fa-brands fa-instagram"></i></a><br>
+        </p>
+
+        <p style="margin-left: 2vw;">For more information: <br>
+            Email <a href="mailto:kessler.0@gmail.com" aria-label="Email for Boys Team" style="color: #ffe0ff;">Mike</a>
+            (coach of boys'
+            team)<br>
+            & <a href="mailto:kesslers@aaps.k12.mi.us" aria-label="Email for Girls Team"
+                style="color: #ffe0ff;">Serena</a> (coach of girls'
+            team)<br><br>
+            <a href="https://www.instagram.com/a2skylinexc/" aria-label="Instagram linked on Ig Logo"
+                style="color: #ffe0ff;"><i class="fa-brands fa-instagram"></i>
+                <img src="Instagram_Glyph_Gradient.png" alt="Instagram Logo"
+                    style="max-width: 32px; max-height: 32px;"></a>
+            <a href="https://x.com/a2skylinexc" aria-label="Twitter" style="color: #ffe0ff;"><i
+                    class="fa-brands fa-instagram"></i>
+                <img src="Twitter_logo-white.png" alt="Twitter Logo"
+                    style="max-width: 32px; max-height: 32px;"></a>
+            <a href="mailto:kessler.0@gmail.com" aria-label="Email for Boys Team" style="color: #ffe0ff;">
+                <img src="Gmail_logo.png" alt="Gmail Logo"
+                    style="max-width: 32px; max-height: 32px;"></a>
+            <a href="https://www.a2schools.org/skyline" aria-label="Skyline high" style="color: #ffe0ff;">
+                <img src="skyline_high_logo.png" alt="Skyline High Logo"
+                    style="max-width: 32px; max-height: 32px;"></a><br><br>
+        </p>
+    </footer>
+
+    <!--Floating action button for search -->
+    <button class="fab" aria-label="Search">
+        <img src="search_button_icon.png" alt="Search Icon">
+    </button>
+
+    <div id="search-popup">
+        <form role="search" method="get" class="search-form" action="#">
+            <label>
+                <span class="screen-reader-text">Search for:</span>
+                <input type="search" class="search-field" placeholder="Search for specific words:" value="" name="s">
+            </label>
+            <button type="submit" class="search-submit">Search</button>
+        </form>
+    </div>
+
+    <script>
+        let currentHighlightIndex = -1;
+        let highlights = [];
+
+        // Handle collapsible sections
+        document.querySelectorAll('.collapsible h2').forEach(header => {
+            header.addEventListener('click', () => {
+                header.parentElement.classList.toggle('active');
+                let content = header.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        });
+
+        // Gallery carousel script with special styles
+        let images = [];
+        let currentImageIndex = 0;
+
+        // Preload images with metadata
+        function preloadImages() {
+            images = [
+                { src: "09-14 Holly Invitational 03.jpg", style: "box-shadow: 10px 10px 5px gold; width:100%; border-radius: 20px;" },
+                { src: "09-14 Holly Invitational 04.jpg", style: "box-shadow: 10px 10px 5px darkgoldenrod; width:100%; border-radius: 20px;" },
+                { src: "09-14 Holly Invitational 07.jpg", style: "box-shadow: 10px 10px 5px gold; width:100%; border-radius: 20px;" },
+                { src: "09-14 Holly Invitational 09.jpg", style: "box-shadow: 10px 10px 5px darkgoldenrod; width:100%; border-radius: 20px;" },
+                { src: "09-14 Holly Invitational 10.jpg", style: "box-shadow: 10px 10px 5px gold; width:100%; border-radius: 20px;" },
+                { src: "09-14 Holly Invitational 12.jpg", style: "box-shadow: 10px 10px 5px darkgoldenrod; width:100%; border-radius: 20px;" },
+                { src: "09-14 Holly Invitational 13.jpg", style: "box-shadow: 10px 10px 5px gold; width:100%; border-radius: 20px;" },
+                { src: "IMG_4181.jpg", style: "box-shadow: 10px 10px 5px darkgoldenrod; width:100%; border-radius: 20px;" },
+                { src: "IMG_4184(1).jpg", style: "box-shadow: 10px 10px 5px gold; width:100%; border-radius: 20px;" },
+                { src: "IMG_9345_V2F_2024-09-14_12-39-43_867.jpg", style: "box-shadow: 10px 10px 5px darkgoldenrod; width:100%; border-radius: 20px;" },
+                // Add more images with their specific styles here
+            ];
+
+            images.sort((a, b) => {
+                return a.src.localeCompare(b.src);
+            });
+        }
+
+        function showImage(index) {
+            const imgElement = document.getElementById("gallery-image");
+            imgElement.src = images[index].src;
+            imgElement.style = images[index].style;
+        }
+
+        function changeImage(n) {
+            currentImageIndex += n;
+            if (currentImageIndex >= images.length) {
+                currentImageIndex = 0;
+            } else if (currentImageIndex < 0) {
+                currentImageIndex = images.length - 1;
+            }
+            showImage(currentImageIndex);
+        }
+
+        // Initialize gallery
+        window.onload = function () {
+            preloadImages();
+            showImage(currentImageIndex);
+        };
+
+        // Toggle search form visibility on FAB click
+        document.querySelector('.fab').addEventListener('click', () => {
+            const searchPopup = document.getElementById('search-popup');
+            if (searchPopup.classList.contains('active')) {
+                searchPopup.classList.remove('active');
+                setTimeout(() => searchPopup.style.display = 'none', 300); // Wait for the transition to complete
+            } else {
+                searchPopup.style.display = 'block';
+                setTimeout(() => searchPopup.classList.add('active'), 10); // Add class after ensuring display is block
+            }
+        });
+
+        // Highlight search results and initialize navigation
+        document.querySelector('.search-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const query = document.querySelector('.search-field').value.trim();
+            if (!query) return;
+
+            // Remove previous highlights
+            document.querySelectorAll('.highlighted').forEach(el => {
+                el.classList.remove('highlighted');
+                el.classList.remove('highlighted-focus');
+            });
+
+            // Reset highlights list and index
+            highlights = [];
+            currentHighlightIndex = -1;
+
+            // Expand all collapsible sections for searching within them
+            document.querySelectorAll('.collapsible.active .content').forEach(section => {
+                section.style.display = "block";
+            });
+
+            // Highlight new results
+            const bodyContent = document.querySelector('body').innerHTML;
+
+            const regex = new RegExp(`(${query})`, 'gi');
+            let newContent = bodyContent.replace(regex, '<span class="highlighted">$1</span>');
+            document.querySelector('body').innerHTML = newContent;
+
+            highlights = document.querySelectorAll('.highlighted');
+
+            // Move focus to the first highlight if exists
+            if (highlights.length > 0) {
+                currentHighlightIndex = 0;
+                highlights[currentHighlightIndex].classList.add('highlighted-focus');
+                highlights[currentHighlightIndex].scrollIntoView(true);
+            }
+        });
+
+        // Navigate through highlights using Tab or Enter key
+        document.addEventListener('keydown', function (e) {
+            if ((e.key === 'Tab' || e.key === 'Enter') && highlights.length > 0) {
+                e.preventDefault();
+                highlights[currentHighlightIndex].classList.remove('highlighted-focus');
+
+                // Move to the next highlight, stop at the end of the page
+                currentHighlightIndex = (currentHighlightIndex + 1);
+                if (currentHighlightIndex >= highlights.length) {
+                    return; // Escape the navigation when reaching the end
+                }
+
+                highlights[currentHighlightIndex].classList.add('highlighted-focus');
+                highlights[currentHighlightIndex].scrollIntoView(true);
+            }
+        });
+    </script>
+</body>
+
+</html>
