@@ -80,16 +80,8 @@
     <section id="home-page" style="background-color: black;">
     </section>
 
-    <nav style="background-color: #294E65;
-">
-        <ul style="color: #ffe0ff;">
-            <li><a href="#home-page">• Home Page</a></li>
-            <li><a href="#home-page">• Summary</a></li>
-            <li><a href="#team-results">• Overall Team Results</a></li>
-            <li><a href="#athlete-results">• Athlete Results</a></li>
-            <li><a href="#individual-results">• Individual Results</a></li>
-            <li><a href="#gallery">• Gallery</a></li>
-        </ul>
+    <nav style="background-color: #294E65; position: sticky; top: 0; z-index: 1000; width: 100%;">
+        <ul style="color: #ffe0ff; display: flex; justify-content: space-around; padding: 0.5rem 0;"></ul>
     </nav>
 
     <header style="background-color: #192a3a;
@@ -102,56 +94,62 @@
 
         <section id="summary" style="margin: 2vw;">
             <h2>&#x1f4dd Summary</h2>
-            <b style="color:moccasin; font-weight: bold; font-style: italic;">The Skyline team </b>
-            performed admirably at the
-            <b style="color: moccasin; font-weight: bold; font-style: italic;">37th Early Bird Open</b>
-            Securing
-            <b style="color: lightgreen; font-weight: bold; font-style: italic;">7th place</b>
-            overall with a team
-            score of 186. Notable individual performances include several athletes who achieved personal records
-            (PRs).
-            <span class="athlete">
-                <b class="athlete"><a href="https://www.athletic.net/athlete/23349678/cross-country" target="_blank"
-                        style="color: inherit;">Matthew Guikema</a></b>
-            </span> led the team with a time of <span class="time">
-                <b class="time">17:35.10</b>
-            </span>, followed closely by <span class="athlete">
-                <b class="athlete"><a href="https://www.athletic.net/athlete/21615273/cross-country" target="_blank"
-                        style="color: inherit;">Nicholas Yuan</a></b>
-            </span> at <span class="time">
-                <b class="time">17:44.40</b>
-            </span>. <span class="athlete">
-                <b class="athlete"><a href="https://www.athletic.net/athlete/21142917/cross-country" target="_blank"
-                        style="color: inherit;">Zeke Lafferty</a></b>
-            </span>, <span class="athlete">
-                <b class="athlete"><a href="https://www.athletic.net/athlete/18820279/cross-country" target="_blank"
-                        style="color: inherit;">Jack Robichaud</a></b>
-            </span>, and <span class="athlete">
-                <b class="athlete"><a href="https://www.athletic.net/athlete/21147171/cross-country" target="_blank"
-                        style="color: inherit;">Gustaf Finn</a></b>
-            </span> rounded out the
-            <b class="time">top five</b>
-            for Skyline, contributing to the team's tight spread between runners. Other athletes who
-            achieved PRs include <span class="athlete">
-                <b class="athlete"><a href="https://www.athletic.net/athlete/23349698/cross-country" target="_blank"
-                        style="color: inherit;">Oskar MacArthur</a></b>
-            </span> (<span class="time">
-                <b class="time">18:37.50</b>
-            </span>),
-            <span class="athlete">
-                <b class="athlete"><a href="https://www.athletic.net/athlete/26424516/cross-country" target="_blank"
-                        style="color: inherit;">Grayson Crooks</a></b>
-            </span> (<span class="time">
-                <b class="time">19:37.10</b>
-            </span>), <span class="athlete">
-                <b class="athlete"><a href="https://www.athletic.net/athlete/23564880/cross-country" target="_blank"
-                        style="color: inherit;">Juan Luis Llanes</a></b>
-            </span> (<span class="time">19:48.00</span>), and <span class="athlete">
-                <b class="athlete"><a href="https://www.athletic.net/athlete/19124076/cross-country" target="_blank"
-                        style="color: inherit;">Paxton Alicandro</a></b>
-            </span> (<span class="time">21:13.00</span>).
-            This race showcased
-            the team's strong depth and improvement as they continue the season.
+            <button id="read-more-btn"
+                style="background-color: #192a3a; color: moccasin; font-weight: bold; cursor: pointer; border: none; padding: 0.5rem; border-radius: 5px;">
+                Read More
+            </button>
+            <div id="full-content" style="display: none;">
+                <b style="color:moccasin; font-weight: bold; font-style: italic;">The Skyline team </b>
+                performed admirably at the
+                <b style="color: moccasin; font-weight: bold; font-style: italic;">37th Early Bird Open</b>
+                Securing
+                <b style="color: lightgreen; font-weight: bold; font-style: italic;">7th place</b>
+                overall with a team
+                score of 186.
+                Notable individual performances include several athletes who achieved personal records
+                (PRs).
+                <span class="athlete">
+                    <b class="athlete"><a href="https://www.athletic.net/athlete/23349678/cross-country" target="_blank"
+                            style="color: inherit;">Matthew Guikema</a></b>
+                </span> led the team with a time of <span class="time">
+                    <b class="time">17:35.10</b>
+                </span>, followed closely by <span class="athlete">
+                    <b class="athlete"><a href="https://www.athletic.net/athlete/21615273/cross-country" target="_blank"
+                            style="color: inherit;">Nicholas Yuan</a></b>
+                </span> at <span class="time">
+                    <b class="time">17:44.40</b>
+                </span>. <span class="athlete">
+                    <b class="athlete"><a href="https://www.athletic.net/athlete/21142917/cross-country" target="_blank"
+                            style="color: inherit;">Zeke Lafferty</a></b>
+                </span>, <span class="athlete">
+                    <b class="athlete"><a href="https://www.athletic.net/athlete/18820279/cross-country" target="_blank"
+                            style="color: inherit;">Jack Robichaud</a></b>
+                </span>, and <span class="athlete">
+                    <b class="athlete"><a href="https://www.athletic.net/athlete/21147171/cross-country" target="_blank"
+                            style="color: inherit;">Gustaf Finn</a></b>
+                </span> rounded out the
+                <b class="time">top five</b>
+                for Skyline, contributing to the team's tight spread between runners. Other athletes who
+                achieved PRs include <span class="athlete">
+                    <b class="athlete"><a href="https://www.athletic.net/athlete/23349698/cross-country" target="_blank"
+                            style="color: inherit;">Oskar MacArthur</a></b>
+                </span> (<span class="time">
+                    <b class="time">18:37.50</b>
+                </span>),
+                <span class="athlete">
+                    <b class="athlete"><a href="https://www.athletic.net/athlete/26424516/cross-country" target="_blank"
+                            style="color: inherit;">Grayson Crooks</a></b>
+                </span> (<span class="time">
+                    <b class="time">19:37.10</b>
+                </span>), <span class="athlete">
+                    <b class="athlete"><a href="https://www.athletic.net/athlete/23564880/cross-country" target="_blank"
+                            style="color: inherit;">Juan Luis Llanes</a></b>
+                </span> (<span class="time">19:48.00</span>), and <span class="athlete">
+                    <b class="athlete"><a href="https://www.athletic.net/athlete/19124076/cross-country" target="_blank"
+                            style="color: inherit;">Paxton Alicandro</a></b>
+                </span> (<span class="time">21:13.00</span>).
+                This race showcased
+                the team's strong depth and improvement as they continue the season.
         </section>
 
         <section id="team-results">
@@ -934,6 +932,20 @@
             }
         });
     </script>
+
+    <script>
+        document.getElementById('read-more-btn').addEventListener('click', function () {
+            const fullContent = document.getElementById('full-content');
+            if (fullContent.style.display === 'none') {
+                fullContent.style.display = 'block';
+                this.textContent = 'Read Less';
+            } else {
+                fullContent.style.display = 'none';
+                this.textContent = 'Read More';
+            }
+        });
+    </script>
+
 </body>
 
 </html>
