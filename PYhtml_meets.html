@@ -674,29 +674,7 @@
             <div class="gallery-container">
                 <div class="full-width-image">
                     <img id="gallery-image" src="IMG_9348.jpg" alt="Gallery Display of Event, runner #992"
-                        style="box-shadow: rgb(218, 165, 32) 10px 10px 5px;width: 100%;border-radius: 20px;">
-                    <img id="gallery-image" src="IMG_9347.jpg" alt="Gallery Display of Event, runner #1012"
-                        style="box-shadow: rgb(218, 165, 32) 10px 10px 5px;width: 100%;border-radius: 20px;">
-                    <img id="gallery-image" src="IMG_9345_V2F_2024-09-14_12-39-43_867.jpg"
-                        alt="Gallery Display of Event, intense competition"
-                        style="box-shadow: rgb(218, 165, 32) 10px 10px 5px;width: 100%;border-radius: 20px;">
-                    <img id="gallery-image" src="IMG_4184(1).jpg" alt="Gallery Display of Event, medallists"
-                        style="box-shadow: rgb(218, 165, 32) 10px 10px 5px;width: 100%;border-radius: 20px;">
-                    <img id="gallery-image" src="IMG_4181.jpg"
-                        alt="Gallery Display of Event, team members preparing their nerves for a big competition"
-                        style="box-shadow: rgb(218, 165, 32) 10px 10px 5px;width: 100%;border-radius: 20px;">
-                    <img id="gallery-image" src="IMG_4178.jpg"
-                        alt="Gallery Display of Event, runners exhausted by the sprint"
-                        style="box-shadow: rgb(218, 165, 32) 10px 10px 5px;width: 100%;border-radius: 20px;">
-                    <img id="gallery-image" src="IMG_4177.jpg"
-                        alt="Gallery Display of Event, runners keeping up good pace"
-                        style="box-shadow: rgb(218, 165, 32) 10px 10px 5px;width: 100%;border-radius: 20px;">
-                    <img id="gallery-image" src="IMG_4176.jpg"
-                        alt="Gallery Display of Event, marching, happy candidates"
-                        style="box-shadow: rgb(218, 165, 32) 10px 10px 5px;width: 100%;border-radius: 20px;">
-                    <img id="gallery-image" src="IMG_4175.jpg"
-                    alt="Gallery Display of Event, candidates chilling out before the competition"
-                    style="box-shadow: rgb(218, 165, 32) 10px 10px 5px;width: 100%;border-radius: 20px;">
+                        style="box-shadow: goldenrod 10px 10px 5px;width: 100%; border-radius: 20px;">
                 </div>
                 <a class="prev" onclick="changeImage(-1)" title="Previous Image">
                     &#10094;<span class="tooltip-text">Back</span></a>
@@ -799,17 +777,15 @@
         // Preload images with metadata
         function preloadImages() {
             images = [
-                { src: "09-14 Holly Invitational 03.jpg", style: "box-shadow: 10px 10px 5px gold; width:100%; border-radius: 20px;" },
-                { src: "09-14 Holly Invitational 04.jpg", style: "box-shadow: 10px 10px 5px darkgoldenrod; width:100%; border-radius: 20px;" },
-                { src: "09-14 Holly Invitational 07.jpg", style: "box-shadow: 10px 10px 5px gold; width:100%; border-radius: 20px;" },
-                { src: "09-14 Holly Invitational 09.jpg", style: "box-shadow: 10px 10px 5px darkgoldenrod; width:100%; border-radius: 20px;" },
-                { src: "09-14 Holly Invitational 10.jpg", style: "box-shadow: 10px 10px 5px gold; width:100%; border-radius: 20px;" },
-                { src: "09-14 Holly Invitational 12.jpg", style: "box-shadow: 10px 10px 5px darkgoldenrod; width:100%; border-radius: 20px;" },
-                { src: "09-14 Holly Invitational 13.jpg", style: "box-shadow: 10px 10px 5px gold; width:100%; border-radius: 20px;" },
-                { src: "IMG_4181.jpg", style: "box-shadow: 10px 10px 5px darkgoldenrod; width:100%; border-radius: 20px;" },
-                { src: "IMG_4184(1).jpg", style: "box-shadow: 10px 10px 5px gold; width:100%; border-radius: 20px;" },
-                { src: "IMG_9345_V2F_2024-09-14_12-39-43_867.jpg", style: "box-shadow: 10px 10px 5px darkgoldenrod; width:100%; border-radius: 20px;" },
-                // Add more images with their specific styles here
+                // Add more gallery images with their specific styles here
+                { src: "IMG_9347.jpg", alt: "Gallery Display of Event, runner #1012", style:"box-shadow: gold, border-radius: 20px;"},
+                { src: "IMG_9345_V2F_2024-09-14_12-39-43_867.jpg", alt: "Gallery Display of Event, intense competition", style:"box-shadow: goldenrod, border-radius: 20px;"},
+                { src: "IMG_4184(1).jpg", alt: "Gallery Display of Event, medallists", style:"box-shadow: gold, border-radius: 20px;"},
+                { src: "IMG_4181.jpg", alt: "Gallery Display of Event, team members preparing their nerves for a big competition", style:"box-shadow: goldenrod, border-radius: 20px;"},
+                { src: "IMG_4178.jpg", alt: "Gallery Display of Event, runners exhausted by the sprint", style:"box-shadow: gold, border-radius: 20px;"},
+                { src: "IMG_4177.jpg", alt: "Gallery Display of Event, runners keeping up good pace", style:"box-shadow: goldenrod, border-radius: 20px;"},
+                { src: "IMG_4176.jpg", alt: "Gallery Display of Event, marching, happy candidates", style:"box-shadow: gold, border-radius: 20px;"},
+                { src: "IMG_4175.jpg", alt: "Gallery Display of Event, candidates chilling out before the competition", style:"box-shadow: goldenrod, border-radius: 20px;"}
             ];
 
             images.sort((a, b) => {
