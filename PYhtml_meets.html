@@ -96,7 +96,7 @@
             <h2>&#x1f4dd Summary</h2>
             <button id="read-more-btn"
                 style="background-color: #192a3a; color: moccasin; font-weight: bold; cursor: pointer; border: none; padding: 0.5rem; border-radius: 5px;">
-                Read More
+                See Full Summary >>>
             </button>
             <div id="full-content" style="display: none;">
                 <b style="color:moccasin; font-weight: bold; font-style: italic;">The Skyline team </b>
@@ -938,10 +938,10 @@
             const fullContent = document.getElementById('full-content');
             if (fullContent.style.display === 'none') {
                 fullContent.style.display = 'block';
-                this.textContent = 'Read Less';
+                this.textContent = 'Read Less <<<';
             } else {
                 fullContent.style.display = 'none';
-                this.textContent = 'Read More';
+                this.textContent = 'See Full Summary >>>';
             }
         });
     </script>
