@@ -7,70 +7,6 @@
     <title>37th Early Bird Open Mens 5000 Meters HS Open 5K Country Meet</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="css_to_PYhtml_meets.css">
-    <style>
-        /* Additional CSS for the floating search button */
-        .fab {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            border: none;
-            border-radius: 50%;
-            width: 56px;
-            height: 56px;
-            cursor: pointer;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            z-index: 1000;
-            /* background-color: #EBEBFF; */
-            /* color: white; */
-            /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); */
-        }
-
-        .fab img {
-            width: 24px;
-            height: 24px;
-        }
-
-        #search-popup {
-            display: none;
-            position: fixed;
-            bottom: 70px;
-            right: 20px;
-            border-radius: 8px;
-            padding: 10px;
-            z-index: 1001;
-            transition: transform 0.3s, opacity 0.3s;
-            transform: scale(0);
-            opacity: 0;
-            /* background: white; */
-            /* border: 1px solid #ccc; */
-            /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); */
-        }
-
-        #search-popup.active {
-            display: block;
-            transform: scale(1);
-            opacity: 1;
-        }
-
-        #search-popup input[type="search"] {
-            width: 200px;
-            padding: 5px;
-            margin-bottom: 10px;
-        }
-
-        #search-popup button {
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-            border-radius: 4px;
-            /* background-color: #315c77; */
-            /* color: white; */
-        }
-    </style>
 </head>
 
 <body>
@@ -81,7 +17,14 @@
     </section>
 
     <nav style="background-color: #294E65; position: sticky; top: 0; z-index: 1000; width: 100%;">
-        <ul style="color: #ffe0ff; display: flex; justify-content: space-around; padding: 0.5rem 0;"></ul>
+        <ul style="color: #ffe0ff; display: flex; justify-content: space-around; padding: 0.5rem 0;">
+            <li><a href="#home-page">• Home Page</a></li>
+            <li><a href="#home-page">• Summary</a></li>
+            <li><a href="#team-results">• Overall Team Results</a></li>
+            <li><a href="#athlete-results">• Athlete Results</a></li>
+            <li><a href="#individual-results">• Individual Results</a></li>
+            <li><a href="#gallery">• Gallery</a></li>
+        </ul>
     </nav>
 
     <header style="background-color: #192a3a;
@@ -98,7 +41,7 @@
                 style="background-color: #192a3a; color: moccasin; font-weight: bold; cursor: pointer; border: none; padding: 0.5rem; border-radius: 5px;">
                 See Full Summary >>>
             </button>
-            <div id="full-content" style="display: none; background-color: #001515;">
+            <div id="full-content" style="display: none; background-color: #003030;">
                 <b style="color:moccasin; font-weight: bold; font-style: italic;">The Skyline team </b>
                 performed admirably at the
                 <b style="color: moccasin; font-weight: bold; font-style: italic;">37th Early Bird Open</b>
