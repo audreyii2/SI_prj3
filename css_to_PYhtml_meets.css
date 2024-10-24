@@ -50,7 +50,7 @@
         font-weight: bold;
     }
 
-    /* Apply touch/click effect on mobile devices */
+    /* Apply touch/click effect on mobile devices! */
     a:active {
         color: #ffffc1;
         font-style: italic;
