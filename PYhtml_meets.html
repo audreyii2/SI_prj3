@@ -37,9 +37,12 @@
 
         <section id="summary" style="margin: 2vw;">
             <h2>&#x1f4dd Summary</h2>
-            <button id="read-more-btn"
-                style="background-color: #192a3a; color: moccasin; font-weight: bold; cursor: pointer; border: none; padding: 0.5rem; border-radius: 5px;">
-                See Full Summary >>>
+            <button id="read-more-btn" class="sparkle-button"
+                style="background-color: #192a3a; color: moccasin; font-weight: bold; cursor: pointer; border: none;
+                padding: 0.5rem; border-radius: 5px; border-color: moccasin;">
+                <div class="sparkle-wrapper"> <!-- added wrapper around text -->
+                    See Full Summary >>>
+                </div>
             </button>
             <div id="full-content" style="display: none; background-color: #003030;">
                 <b style="color:moccasin; font-weight: bold; font-style: italic;">The Skyline team </b>
@@ -739,7 +742,7 @@
                     <a href="https://x.com/a2skylinexc" aria-label="Twitter linked on Logo in Search">
                         <img src="floating_twitter.png" alt="Logo of Twitter" style="width: 16px">
                     </a>
-                :
+                    :
                 </span>
                 <input type="search" class="search-field" placeholder="Search for specific words:" value="" name="s">
             </label>
